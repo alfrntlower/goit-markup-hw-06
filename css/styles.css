@@ -20,6 +20,7 @@
   --icon-color: #afb1b8;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --time-transition: 250ms;
+  --form-submit-button: #188ce8;
 }
 
 body {
@@ -644,6 +645,14 @@ img {
   color: var(--white-color);
 }
 
+.footer-main-info {
+  width: 230px;
+}
+.footer-social {
+  margin-left: 70px;
+  padding-bottom: 40px;
+}
+
 .footer-social-title {
   margin-bottom: 20px;
 
@@ -652,13 +661,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
-}
-.footer-main-info {
-  width: 230px;
-}
-.footer-social {
-  margin-left: 70px;
-  padding-bottom: 40px;
 }
 
 .footer-list-icon {
@@ -692,6 +694,59 @@ img {
   background-color: var(--accent-color);
 }
 
+.footer-subscription {
+  margin-left: 93px;
+}
+.footer-subscription-form {
+  display: flex;
+}
+
+.footer-subscription-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.footer-subscription-email {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: var(--hero-bg-color);
+  width: 358px;
+  height: 50px;
+}
+.footer-subscription-form input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-button {
+  display: flex;
+  align-items: center;
+
+  margin-left: 12px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  text-align: center;
+}
+.subscription-button-icon {
+  padding: 0;
+  fill: var(--white-color);
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
 /* Modal*/
 .backdrop {
   position: fixed;
@@ -725,13 +780,18 @@ img {
   width: 528px;
   height: 581px;
   background-color: var(--white-color);
+  border-radius: 4px;
+
+  padding: 40px;
 
   transition: transform var(--time-transition) var(--cubic);
 }
 .modal-close-icon {
   width: 10px;
   height: 10px;
+  fill: #000000;
 }
+
 .modal-close-button {
   position: absolute;
   top: 8px;
@@ -749,4 +809,121 @@ img {
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: var(--white-color);
+
+  transition: fill var(--time-transition) var(--cubic);
+}
+.modal-close-button:hover .modal-close-icon {
+  fill: var(--accent-color);
+}
+
+.main-form {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.main-form-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+}
+
+.form-field input {
+  width: 448px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 120px;
+  margin-bottom: 20px;
+  width: 448px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+.form-field textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field:hover input,
+.form-field:hover textarea {
+  border-color: var(--accent-color);
+}
+
+.form-field-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-field-checkbox label {
+  margin-left: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color);
+}
+.policy-terms {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
+}
+
+.form-submit-botton {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--form-submit-button);
+  text-align: center;
+  padding: 10px 55px;
+
+  transition: box-shadow var(--time-transition) var(--cubic);
+}
+.form-submit-botton:focus,
+.form-submit-botton:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

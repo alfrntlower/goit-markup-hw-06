@@ -407,6 +407,20 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="footer-subscription">
+                <h2 class="footer-subscription-title">Подпишитесь на рассылку</h2>
+            
+                <form action="" class="footer-subscription-form">
+                    <input type="email" placeholder="E-mail" class="footer-subscription-email">
+                    <button type="submit" class="subscription-button">Подписаться
+                        <svg class="subscription-button-icon">
+                            <use href="./images/subscription-icon_1.svg#icon-subscription"></use>
+                        </svg>
+                    </button>
+                </form>
+
+            </div>
             
 
         </div>
@@ -420,7 +434,61 @@
                         <use href="./images/close-button_1.svg#icon-close-button"></use>
                     </svg>
             </button>
+
+            <form action="" class="main-form form js-speaker-form">
+                <h1 class="main-form-title">
+                    Оставьте свои данные, мы вам перезвоним
+                </h1>
+
+                <div class="form-field">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" autofocus/>
+                </div>
+
+                <div class="form-field">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel" />
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Почта</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+
+                <div class="form-field">
+                    <label for="comment">Коментарий</label>
+                    <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
+                </div>
+
+                <div class="form-field-checkbox">
+                    <input type="checkbox" name="policy" id="policy">
+                    <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="" class="policy-terms">Условия договора</a></label>
+                </div>
+
+
+
+                <button type="submit" class="form-submit-botton">Отправить</button>
+            
+            </form>
+            <script>
+                (() => {
+                    document
+                        .querySelector('.js-speaker-form')
+                        .addEventListener('submit', e => {
+                            e.preventDefault();
+
+                            new FormData(e.currentTarget).forEach((value, name) =>
+                                console.log(`${name}: ${value}`),
+                            );
+
+                            e.currentTarget.reset();
+                        });
+                })();
+            </script>
+            
         </div>
+
+        
     </div>
     <script src="./js/modal.js"></script>
 
