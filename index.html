@@ -412,10 +412,10 @@
                 <h2 class="footer-subscription-title">Подпишитесь на рассылку</h2>
             
                 <form action="" class="footer-subscription-form">
-                    <input type="email" placeholder="E-mail" class="footer-subscription-email">
+                    <input type="email" class="footer-subscription-email" placeholder="E-mail"  required>
                     <button type="submit" class="subscription-button">Подписаться
                         <svg class="subscription-button-icon">
-                            <use href="./images/subscription-icon_1.svg#icon-subscription"></use>
+                            <use href="./images/form-sprite.svg#icon-subscription"></use>
                         </svg>
                     </button>
                 </form>
@@ -431,7 +431,7 @@
         <div class="modal">
                 <button data-modal-close class="modal-close-button">
                     <svg class="modal-close-icon">
-                        <use href="./images/close-button_1.svg#icon-close-button"></use>
+                        <use href="./images/form-sprite.svg#icon-close-button"></use>
                     </svg>
             </button>
 
@@ -440,36 +440,53 @@
                     Оставьте свои данные, мы вам перезвоним
                 </h1>
 
-                <div class="form-field">
-                    <label for="name">Имя</label>
-                    <input type="text" name="name" id="name" autofocus/>
-                </div>
 
-                <div class="form-field">
-                    <label for="tel">Телефон</label>
-                    <input type="tel" name="tel" id="tel" />
-                </div>
+                <label class="form-field">
+                    <span class="form-field-label">Имя</span>
+                    <input type="text" class="in-input" name="name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                        title="Данное поле должно содержать 2 слова" />
+                    <svg class="icon-form">
+                        <use href="./images/form-sprite.svg#icon-form-name"></use>
+                    </svg>
+                </label>
 
-                <div class="form-field">
-                    <label for="email">Почта</label>
-                    <input type="email" name="email" id="email" />
-                </div>
 
-                <div class="form-field">
-                    <label for="comment">Коментарий</label>
+                <label class="form-field">
+                    <span class="form-field-label">Телефон</span>
+                    <input type="tel" class="in-input" name="tel" pattern="[0-9]{10}" title="Необходимый формат 000-000-00-00" />
+                    <svg class="icon-form">
+                        <use href="./images/form-sprite.svg#icon-form-tel"></use>
+                    </svg>
+                </label>
+
+                <label class="form-field">
+                    <span class="form-field-label">Почта</span>
+                    <input type="email" class="in-input" name="email"/>
+                    <svg class="icon-form">
+                        <use href="./images/form-sprite.svg#icon-form-email"></use>
+                    </svg>
+                </label>
+       
+                <label class="form-field">
+                    <span class="form-field-label">Коментарий</span>
                     <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
-                </div>
+                </label>
 
-                <div class="form-field-checkbox">
-                    <input type="checkbox" name="policy" id="policy">
-                    <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="" class="policy-terms">Условия договора</a></label>
-                </div>
+                <label class="form-field-checkbox">
+                    <input class="checkbox" type="checkbox" name="policy" value="agree" required>
+                    <span class="checkbox-icon"></span>
+                    <span class="policy-label">Соглашаюсь с рассылкой и принимаю <a href="" class="policy-terms">Условия договора</a></span>
+                </label>
 
 
 
                 <button type="submit" class="form-submit-botton">Отправить</button>
             
             </form>
+
+
+            <!-- Script for check input-->
+            <!--
             <script>
                 (() => {
                     document
@@ -485,11 +502,14 @@
                         });
                 })();
             </script>
+                -->
             
         </div>
 
         
     </div>
+
+    <!-- Script Open / Close Modal-->
     <script src="./js/modal.js"></script>
 
 </body>
