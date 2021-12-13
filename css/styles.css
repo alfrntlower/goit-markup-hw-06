@@ -711,6 +711,7 @@ img {
   text-transform: uppercase;
   color: var(--white-color);
 }
+
 .footer-subscription-form input {
   font-weight: 400;
   font-size: 16px;
@@ -730,11 +731,9 @@ img {
   border: 1px solid var(--accent-color);
 }
 
-/**
 .footer-subscription-email:invalid {
   border-color: var(--invalid-color);
 }
-**/
 
 .subscription-button {
   display: flex;
