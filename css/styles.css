@@ -321,7 +321,11 @@ img {
   color: var(--white-color);
   text-transform: uppercase;
 }
-
+.what-we-do__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /* Наша команда */
 .our-team-section {
   background-color: var(--secondary-bg-color);
@@ -559,6 +563,11 @@ img {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+.ex-works__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .ex-works-thumb {
   position: relative;
@@ -597,6 +606,7 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-link {
@@ -650,7 +660,6 @@ img {
   width: 230px;
 }
 .footer-social {
-  margin-left: 70px;
   padding-bottom: 40px;
 }
 
@@ -695,9 +704,6 @@ img {
   background-color: var(--accent-color);
 }
 
-.footer-subscription {
-  margin-left: 93px;
-}
 .footer-subscription-form {
   display: flex;
 }
@@ -956,7 +962,7 @@ textarea {
 .checkbox:checked + .checkbox-icon {
   border-color: transparent;
   background-color: var(--accent-color);
-  background-image: url(/images/checkbox-icon.svg);
+  background-image: url(../images/checkbox-icon.svg);
   background-size: contain;
   background-origin: border-box;
 }
